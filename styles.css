@@ -1,13 +1,12 @@
 /* styles-ocean.css - Estilo Azul Océano & Dorado 2025 */
 * { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0c1445, #1e3a8a, #1e40af);
-  color: #e0f2fe;
-  min-height: 100vh;
-  background-attachment: fixed;
-}
+    body {
+      background: #0a2a0a;
+      color: #00ff41;
+      font-family: 'Press Start 2P', cursive;
+      min-height: 100vh;
+      image-rendering: pixelated;
+    }
 
 /* Splash */
 .splash {
