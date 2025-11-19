@@ -3,7 +3,7 @@
     {
       "texto": "En el parque de atracciones, Marta y sus 3 amigos compraron entradas. Cada entrada de niño cuesta 8 € y cada entrada de adulto 15 €. Pagaron en total 46 € con un billete de 50 € y les devolvieron 4 €. ¿Cuántas entradas de adulto compraron?",
       "opciones": ["0", "1", "2", "3"],
-      "correcta": "1"
+      "correcta": "2"
     },
     {
       "texto": "Una frutería recibió el lunes 48 kg de manzanas, el martes 35 kg y el miércoles 29 kg. El jueves vendieron 56 kg y el viernes 42 kg. ¿Cuántos kilos de manzanas les quedan al final de la semana?",
@@ -32,18 +32,18 @@
     },
     {
       "texto": "Pablo vendió 18 entradas de cine a 7 € y 25 entradas a 9 €. Su jefe le dijo que había vendido 450 € en total. ¿Cuánto dinero le falta o le sobra a Pablo?",
-      "opciones": ["Le faltan 11 €", "Le sobran 11 €", "Le faltan 24 €", "Está exacto"],
-      "correcta": "Le faltan 11 €"
+      "opciones": ["Le faltan 99 €", "Le sobran 11 €", "Le faltan 24 €", "Está exacto"],
+      "correcta": "Le faltan 99 €"
     },
     {
       "texto": "Una granja tiene gallinas y conejos. En total hay 36 cabezas y 100 patas. ¿Cuántas gallinas hay?",
       "opciones": ["28", "26", "22", "20"],
-      "correcta": "26"
+      "correcta": "22"
     },
     {
       "texto": "En una pastelería hacen paquetes de 6 magdalenas. El lunes hicieron 156 magdalenas, el martes 189 y el miércoles 174. ¿Cuántos paquetes completos pudieron hacer en total estos tres días?",
       "opciones": ["79", "83", "85", "86"],
-      "correcta": "85"
+      "correcta": "86"
     },
     {
       "texto": "Sara tenía ahorros y compró un juego de 48 €. Le quedaron 27 €. Luego su abuela le dio el doble de lo que le quedaba y después gastó 36 € en chuches. Ahora tiene 18 €. ¿Cuánto dinero tenía Sara al principio?",
