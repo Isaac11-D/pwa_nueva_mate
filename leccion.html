@@ -4,39 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lección - Problemas de varias operaciones</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { 
+      background:#0a2a0a; 
+      color:#00ff41; 
+      font-family:'Press Start 2P', cursive; 
+      min-height:100vh; 
+      line-height:1.8;
+    }
+  </style>
 </head>
 <body>
-  <header>
-<a href="home.html" style="color:#00ff41; font-family:'Press Start 2P'; font-size:1.3rem; 
-        text-decoration:none; text-shadow:0 0 10px #00ff41;">← INICIO</a>   
-  <h1>Lección</h1>
+
+  <!-- BOTÓN VOLVER + TÍTULO -->
+  <header style="background:#000; padding:20px; text-align:center; border-bottom:10px solid #00ff41; position:relative;">
+    <a href="home.html" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); color:#00ff41; font-family:'Press Start 2P'; font-size:1.4rem; text-decoration:none; text-shadow:0 0 15px #00ff41; background:#000; padding:10px 20px; border:4px solid #00ff41; border-radius:10px;">
+      ← INICIO
+    </a>
+    <h1 style="color:#fff; font-size:2.8rem; text-shadow:6px 6px 0 #ff0040; display:inline-block;">LECCIÓN</h1>
   </header>
 
-  <div class="container">
-    <div class="card">
-      <h2>Problemas de varias operaciones</h2>
-      
-      <p><strong>Patricia va con su familia a un espectáculo de luz y sonido.</strong><br>
-      Ha sacado 3 entradas infantiles a 12 € cada una y 4 entradas de adulto. Ha entregado para pagar 150 € y le han devuelto 22 €.<br>
-      ¿Cuánto le ha costado cada entrada de adulto?</p>
-      
-      <p><strong>Resolución paso a paso:</strong></p>
-      <ol style="font-size:1.4rem; line-height:2">
-        <li>Todas las entradas en total → 150 − 22 = 128 €</li>
-        <li>Las 3 entradas infantiles → 3 × 12 = 36 €</li>
-        <li>Las 4 entradas de adulto → 128 − 36 = 92 €</li>
-        <li>Cada entrada de adulto → 92 ÷ 4 = 23 €</li>
+  <div style="max-width:1000px; margin:30px auto; padding:20px;">
+
+    <div style="background:#001a00; border:8px solid #00ff41; border-radius:20px; padding:40px; color:#00ff41; box-shadow:0 0 30px #00ff4188 inset;">
+
+      <h2 style="color:#ffd700; font-size:2.4rem; text-align:center; margin-bottom:30px; text-shadow:4px 4px 0 #000;">
+        Problemas de varias operaciones
+      </h2>
+
+      <p style="font-size:1.35rem; background:#000; padding:20px; border-left:8px solid #00ff41;">
+        <strong>Patricia va con su familia a un espectáculo de luz y sonido.</strong><br>
+        Ha sacado 3 entradas infantiles a 12 € cada una y 4 entradas de adulto. Ha entregado para pagar 150 € y le han devuelto 22 €.<br>
+        ¿Cuánto le ha costado cada entrada de adulto?
+      </p>
+
+      <p style="font-size:1.4rem; color:#ffca28; margin-top:25px;"><strong>Resolución paso a paso:</strong></p>
+      <ol style="font-size:1.4rem; margin:25px 0; padding-left:50px; line-height:2.4;">
+        <li style="background:#000; padding:10px; margin:8px 0; border-left:6px solid #00ff41;">Todas las entradas en total → 150 − 22 = 128 €</li>
+        <li style="background:#000; padding:10px; margin:8px 0; border-left:6px solid #00ff41;">Las 3 entradas infantiles → 3 × 12 = 36 €</li>
+        <li style="background:#000; padding:10px; margin:8px 0; border-left:6px solid #00ff41;">Las 4 entradas de adulto → 128 − 36 = 92 €</li>
+        <li style="background:#000; padding:10px; margin:8px 0; border-left:6px solid #ffd700; color:#ffd700; font-weight:bold;">
+          Cada entrada de adulto → 92 ÷ 4 = 23 €
+        </li>
       </ol>
 
-      <h3 style="color:#ffd700; margin-top:2rem">Problema 1</h3>
-      <p>María tiene 12 años. Su hermano Diego tiene 3 años más que ella; su padre tiene el triple de años que Diego y su madre tiene 5 años menos que su padre.<br>
-      ¿Cuántos años tiene la madre de María?</p>
+      <h3 style="color:#ffd700; font-size:1.9rem; margin:40px 0 20px; text-shadow:4px 4px 0 #000;">Problema 1</h3>
+      <p style="font-size:1.35rem; background:#000; padding:18px; border-left:6px solid #2962ff;">
+        María tiene 12 años. Su hermano Diego tiene 3 años más que ella; su padre tiene el triple de años que Diego y su madre tiene 5 años menos que su padre.<br>
+        ¿Cuántos años tiene la madre de María?
+      </p>
 
-      <h3 style="color:#ffd700">Problema 2 – Gráfico de helados</h3>
-      <p>En este pictograma se ha representado el número de helados que ha vendido un puesto desde el lunes hasta el viernes de una semana:</p>
-      <ul style="font-size:1.4rem; line-height:2">
+      <h3 style="color:#ffd700; font-size:1.9rem; margin:40px 0 20px; text-shadow:4px 4px 0 #000;">Problema 2 – Gráfico de helados</h3>
+      <p style="font-size:1.35rem; background:#000; padding:18px; border-left:6px solid #ffca28;">
+        En este pictograma se ha representado el número de helados que ha vendido un puesto desde el lunes hasta el viernes de una semana:
+      </p>
+      <ul style="font-size:1.35rem; margin:25px 0; padding-left:50px; line-height:2.3;">
         <li>Lunes → 30 helados</li>
         <li>Martes → 15 helados</li>
         <li>Martes y miércoles → ¿Cuántos helados se vendieron en total el martes y el miércoles?</li>
@@ -44,34 +68,43 @@
         <li>Diferencia entre el día que más y el que menos vendió</li>
       </ul>
 
-      <h3 style="color:#ffd700">Problema 3</h3>
-      <p>Una exposición de arte abrió al público 290 días al año. Cada día, la visitan 15 grupos de 27 personas cada uno.<br>
-      ¿Cuántas personas visitan al año la exposición?</p>
+      <h3 style="color:#ffd700; font-size:1.9rem; margin:40px 0 20px; text-shadow:4px 4px 0 #000;">Problema 3</h3>
+      <p style="font-size:1.35rem; background:#000; padding:18px; border-left:6px solid #e91e63;">
+        Una exposición de arte abrió al público 290 días al año. Cada día, la visitan 15 grupos de 27 personas cada uno.<br>
+        ¿Cuántas personas visitan al año la exposición?
+      </p>
 
-      <h3 style="color:#ffd700">Problema 4 – Cálculo mental y tabla</h3>
-      <p>En la tienda de Joaquín han recibido un lote con:</p>
-      <table style="margin:2rem auto; font-size:1.3rem; border-collapse:collapse">
-        <tr><th></th><th>Había en tienda</th><th>Han recibido</th><th>Han vendido</th><th>Precio de venta</th></tr>
-        <tr><td>Camisetas</td><td>87</td><td>432</td><td>53</td><td>12 €</td></tr>
-        <tr><td>Pantalones</td><td>53</td><td>207</td><td>29</td><td>30 €</td></tr>
-        <tr><td>Vestidos</td><td>26</td><td>180</td><td>13</td><td>45 €</td></tr>
+      <h3 style="color:#ffd700; font-size:1.9rem; margin:40px 0 20px; text-shadow:4px 4px 0 #000;">Problema 4 – Cálculo mental y tabla</h3>
+      <p style="font-size:1.35rem;">En la tienda de Joaquín han recibido un lote con:</p>
+      <table style="margin:30px auto; font-size:1.3rem; border-collapse:collapse; background:#000; border:6px solid #00ff41;">
+        <tr style="background:#00ff41; color:#000;">
+          <th style="padding:12px;">Artículo</th><th style="padding:12px;">Había en tienda</th><th style="padding:12px;">Han recibido</th><th style="padding:12px;">Han vendido</th><th style="padding:12px;">Precio de venta</th>
+        </tr>
+        <tr style="background:#001a00;"><td style="padding:12px; text-align:center;">Camisetas</td><td style="padding:12px; text-align:center;">87</td><td style="padding:12px; text-align:center;">432</td><td style="padding:12px; text-align:center;">53</td><td style="padding:12px; text-align:center;">12 €</td></tr>
+        <tr style="background:#001a00;"><td style="padding:12px; text-align:center;">Pantalones</td><td style="padding:12px; text-align:center;">53</td><td style="padding:12px; text-align:center;">207</td><td style="padding:12px; text-align:center;">29</td><td style="padding:12px; text-align:center;">30 €</td></tr>
+        <tr style="background:#001a00;"><td style="padding:12px; text-align:center;">Vestidos</td><td style="padding:12px; text-align:center;">26</td><td style="padding:12px; text-align:center;">180</td><td style="padding:12px; text-align:center;">13</td><td style="padding:12px; text-align:center;">45 €</td></tr>
       </table>
 
-      <p>Preguntas:</p>
-      <ul style="font-size:1.4rem; line-height:2">
+      <p style="font-size:1.35rem; margin-top:30px;">Preguntas:</p>
+      <ul style="font-size:1.35rem; margin:20px 0; padding-left:50px; line-height:2.3;">
         <li>¿Cuántas camisetas y pantalones quedan en total en la tienda al cerrar por la noche?</li>
         <li>¿Cuánto dinero ha obtenido hoy Joaquín por la venta de los vestidos?</li>
         <li>¿Cuánto podría haber obtenido si hubiera vendido todos los vestidos que tenía?</li>
       </ul>
 
-      <p style="text-align:center; font-size:2rem; color:#ffd700; margin:3rem 0">
+      <p style="text-align:center; font-size:2.2rem; color:#ffd700; margin:50px 0; text-shadow:5px 5px 0 #000;">
         ¡Ya sabes resolver problemas combinando varias operaciones!
       </p>
 
-      <button class="big-btn" onclick="location.href='problemas.html'">
-        ¡Prueba tus conocimientos! 
-      </button>
+      <div style="text-align:center; margin:50px 0;">
+        <button onclick="location.href='problemas.html'" 
+                style="padding:25px 70px; background:#ff0040; color:#fff; font-family:'Press Start 2P'; font-size:2rem; border:none; border-radius:20px; cursor:pointer; box-shadow:0 15px 0 #c40030; text-shadow:4px 4px 0 #000;">
+          ¡PRUEBA TUS CONOCIMIENTOS!
+        </button>
+      </div>
+
     </div>
   </div>
+
 </body>
 </html>
