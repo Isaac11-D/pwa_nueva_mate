@@ -78,7 +78,7 @@ header h1 {
   transform: translateY(-15px) scale(1.06);
   box-shadow: 0 30px 60px #0008;
 }
-.btn span { font-size: 5.5rem; display: block; margin-bottom: 12px; }
+.btn span { font-size: 2.5rem; display: block; margin-bottom: 12px; }
 .btn .t { font-size: 1.9rem; font-weight: bold; color: #2e7d32; }
 .btn .s { font-size: 1.15rem; color: #444; margin-top: 8px; }
 

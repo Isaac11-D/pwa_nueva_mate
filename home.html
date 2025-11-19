@@ -31,11 +31,6 @@
       <div class="t">50 Problemas</div>
       <div class="s">¡Siempre en orden diferente!</div>
     </a>
-    <div class="btn" onclick="noti()">
-      <span>Notificación</span>
-      <div class="t">Notificación Local</div>
-      <div class="s">¡Prueba que funciona!</div>
-    </div>
     <div class="btn" onclick="alert('¡Sensores activados! Gira tu celular')">
       <span>Teléfono</span>
       <div class="t">Sensores</div>
@@ -43,16 +38,7 @@
     </div>
   </div>
 
-  <footer>Funciona 100% sin internet • PWA 2025</footer>
-
   <script>
-    function noti(){
-      if("Notification" in window){
-        Notification.requestPermission().then(p=>{
-          if(p==="granted") new Notification("¡Hola Isaac!", {body:"Tu app está lista", icon:"assets/logo2.png"});
-        });
-      }
-    }
     function actualizar(){
       document.getElementById('status').textContent = navigator.onLine ? "Conectado" : "¡Offline y todo funciona!";
     }
