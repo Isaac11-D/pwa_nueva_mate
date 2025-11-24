@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>General – Conceptos Fundamentales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { 
+      background:#0a2a0a; 
+      color:#00ff41; 
+      font-family:'Press Start 2P', cursive; 
+      min-height:100vh; 
+      line-height:1.8;
+    }
+    .card {
+      background:#001a00;
+      border:8px solid #00ff41;
+      border-radius:20px;
+      padding:40px;
+      margin-top:30px;
+      box-shadow:0 0 30px #00ff4188 inset;
+    }
+    h2 {
+      color:#ffd700;
+      font-size:2.4rem;
+      text-shadow:4px 4px 0 #000;
+      text-align:center;
+      margin-bottom:25px;
+    }
+    p, li {
+      font-size:1.25rem;
+      margin-bottom:20px;
+      line-height:2.1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header style="background:#000; padding:20px; text-align:center; border-bottom:10px solid #00ff41; position:relative;">
+    <a href="home.html" style="position:absolute; left:20px; top:50%; transform:translateY(-50%);
+      color:#00ff41; font-family:'Press Start 2P'; font-size:1.4rem; text-decoration:none;
+      text-shadow:0 0 15px #00ff41; background:#000; padding:10px 20px; border:4px solid #00ff41; border-radius:10px;">
+      ← INICIO
+    </a>
+    <h1 style="color:#fff; font-size:2.8rem; text-shadow:6px 6px 0 #ff0040;">GENERAL</h1>
+  </header>
+
+  <div style="max-width:1000px; margin:30px auto; padding:20px;">
+
+    <!-- NÚMEROS NATURALES -->
+    <div class="card">
+      <h2>Números Naturales</h2>
+
+      <p>
+        Los <strong>números naturales</strong> son los que usamos para contar y ordenar elementos. Comienzan
+        desde el 0 o desde el 1 (dependiendo del criterio), pero siempre siguen aumentando sin límite.
+      </p>
+
+      <p style="background:#000; padding:20px; border-left:8px solid #00ff41;">
+        Ejemplos: 0, 1, 2, 3, 4, 5, 6...
+      </p>
+
+      <h3 style="color:#ffd700; font-size:1.8rem; margin-top:20px;">Características:</h3>
+      <ul style="padding-left:40px;">
+        <li>Sirven para contar objetos.</li>
+        <li>Sirven para ordenar posiciones.</li>
+        <li>Siempre son números positivos (incluyendo el 0 según la convención).</li>
+        <li>No tienen fin; es decir, son infinitos.</li>
+      </ul>
+
+      <p>
+        También son la base de casi todos los demás sistemas numéricos y aparecen en operaciones como
+        suma, resta, multiplicación y división.
+      </p>
+    </div>
+
+    <!-- PROBLEMAS DE VARIAS OPERACIONES -->
+    <div class="card">
+      <h2>Problemas de Varias Operaciones</h2>
+
+      <p>
+        Un <strong>problema de varias operaciones</strong> es aquel que requiere realizar más de un cálculo para
+        obtener la respuesta final. Estos problemas combinan operaciones como sumar, restar, multiplicar
+        y dividir en distintos pasos.
+      </p>
+
+      <p style="background:#000; padding:20px; border-left:8px solid #00ff41;">
+        Ejemplo típico: primero se calcula un total, después se resta algo, y finalmente se divide entre
+        una cantidad para obtener el resultado final.
+      </p>
+
+      <h3 style="color:#ffd700; font-size:1.8rem;">¿Qué habilidades desarrollan?</h3>
+
+      <ul style="padding-left:40px;">
+        <li>Comprender el orden correcto de operaciones.</li>
+        <li>Organizar información de manera lógica.</li>
+        <li>Resolver situaciones reales paso a paso.</li>
+        <li>Aplicar varias operaciones sin confundirse.</li>
+      </ul>
+
+      <p>
+        Este tipo de problemas aparecen en compras, repartos, cálculos de edad, gastos, ganancias y casi
+        cualquier situación de la vida diaria.
+      </p>
+    </div>
+
+    <!-- BOTÓN A LECCIÓN -->
+    <div style="text-align:center; margin:60px 0;">
+      <button onclick="location.href='leccion.html'" 
+        style="padding:25px 70px; background:#ff0040; color:#fff; font-family:'Press Start 2P';
+        font-size:2rem; border:none; border-radius:20px; cursor:pointer; 
+        box-shadow:0 15px 0 #c40030; text-shadow:4px 4px 0 #000;">
+        IR A LA LECCIÓN
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>
