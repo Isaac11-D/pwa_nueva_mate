@@ -1,176 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operaciones Matemáticas - Juego</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones Básicas</title>
 
-    <style>
-        body {
-            font-family: "Trebuchet MS", Arial, sans-serif;
-            background: #00b248;
-            background-size: cover;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-        h1 {
-            font-size: 42px;
-            text-shadow: 3px 3px 0px #000;
-            margin-bottom: 10px;
-        }
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { 
+      background:#0a2a0a; 
+      color:#00ff41; 
+      font-family:'Press Start 2P', cursive; 
+      min-height:100vh; 
+      line-height:1.8;
+      padding:20px;
+    }
 
-        .game-panel {
-            background: rgba(0, 0, 0, 0.75);
-            border: 4px solid #00e676;
-            border-radius: 20px;
-            width: 95%;
-            max-width: 480px;
-            margin: auto;
-            padding: 20px;
-            box-shadow: 0 0 20px #00ff8a;
-            animation: aparecer 0.6s ease-out;
-        }
+    header {
+      background:#000; 
+      padding:20px; 
+      text-align:center; 
+      border-bottom:10px solid #00ff41;
+      position:relative;
+    }
 
-        @keyframes aparecer {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
+    header a {
+      position:absolute; 
+      left:20px; 
+      top:50%; 
+      transform:translateY(-50%); 
+      color:#00ff41; 
+      font-size:1.2rem; 
+      text-decoration:none; 
+      text-shadow:0 0 15px #00ff41; 
+      background:#000; 
+      padding:10px 20px; 
+      border:4px solid #00ff41; 
+      border-radius:10px;
+    }
 
-        .text-box {
-            padding: 12px;
-            width: 90%;
-            border-radius: 10px;
-            font-size: 20px;
-            border: 3px solid #00e676;
-            background: #1b1b1b;
-            color: #00e676;
-            font-weight: bold;
-        }
+    header h1 {
+      color:#fff; 
+      font-size:2.4rem; 
+      text-shadow:6px 6px 0 #ff0040;
+    }
 
-        select {
-            padding: 12px;
-            width: 95%;
-            border-radius: 10px;
-            font-size: 18px;
-            border: 3px solid #00e676;
-            background: #263238;
-            color: #00e676;
-        }
+    .card {
+      background:#001a00;
+      border:8px solid #00ff41;
+      border-radius:20px;
+      padding:40px;
+      margin:30px auto;
+      max-width:900px;
+      box-shadow:0 0 30px #00ff4188 inset;
+    }
 
-        .btn {
-            margin-top: 15px;
-            padding: 12px;
-            width: 90%;
-            background: #00e676;
-            color: #000;
-            border-radius: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0px 0px 10px #00ff9d;
-            transition: 0.15s ease-in-out;
-        }
+    h2 {
+      color:#ffd700;
+      font-size:2.2rem;
+      text-shadow:4px 4px 0 #000;
+      text-align:center;
+      margin-bottom:25px;
+    }
 
-        .btn:hover {
-            background: #00b248;
-            box-shadow: 0px 0px 20px #00ff9d;
-        }
+    p, li {
+      font-size:1.25rem;
+      margin-bottom:20px;
+      line-height:2.1;
+    }
 
-        #resultado {
-            font-size: 30px;
-            margin-top: 15px;
-            color: #00e676;
-            text-shadow: 2px 2px 0px #000;
-        }
+    .input-box {
+      width:100%;
+      padding:15px;
+      margin:15px 0;
+      border:4px solid #00ff41;
+      background:#000;
+      color:#00ff41;
+      font-family:'Press Start 2P';
+      font-size:1.2rem;
+      border-radius:10px;
+      text-align:center;
+    }
 
-        .info-box {
-            margin-top: 20px;
-            padding: 15px;
-            background: #1b1b1b;
-            border-left: 6px solid #00e676;
-            border-radius: 10px;
-            text-align: left;
-            font-size: 16px;
-        }
+    .select-box {
+      width:100%;
+      padding:15px;
+      border:4px solid #00ff41;
+      background:#000;
+      color:#00ff41;
+      font-family:'Press Start 2P';
+      font-size:1.2rem;
+      border-radius:10px;
+      margin-top:10px;
+    }
 
-        .btn-problemas {
-            background: #ffea00;
-            color: #000;
-            box-shadow: 0px 0px 10px #fff176;
-        }
+    .btn {
+      width:100%;
+      padding:20px;
+      margin-top:25px;
+      background:#ff0040;
+      color:#fff;
+      font-family:'Press Start 2P';
+      font-size:1.4rem;
+      border:none;
+      border-radius:15px;
+      cursor:pointer;
+      box-shadow:0 10px 0 #c40030;
+      text-shadow:4px 4px 0 #000;
+    }
 
-        .btn-problemas:hover {
-            background: #fdd835;
-            box-shadow: 0px 0px 20px #fff176;
-        }
-    </style>
+    .btn:hover {
+      transform:translateY(-5px);
+    }
+
+    #resultado {
+      margin-top:25px;
+      font-size:1.8rem;
+      color:#ffd700;
+      text-shadow:3px 3px 0 #000;
+      text-align:center;
+    }
+
+  </style>
 </head>
 
 <body>
 
-    <h1>🎮 Modo Arcade Matemático</h1>
-    <p style="text-shadow: 2px 2px 0px #000;">¡Introduce los números y elige la operación para jugar!</p>
+  <header>
+    <a href="home.html">← INICIO</a>
+    <h1>OPERACIONES BÁSICAS</h1>
+  </header>
 
-    <div class="game-panel">
+  <div class="card">
 
-        <input type="number" id="num1" class="text-box" placeholder="Primer número">
-        <br><br>
+    <h2>Calculadora de Operaciones</h2>
 
-        <input type="number" id="num2" class="text-box" placeholder="Segundo número">
-        <br><br>
+    <p>Introduce dos números y selecciona la operación que deseas realizar. Esta herramienta te ayudará a practicar y comprender cómo funcionan las operaciones básicas.</p>
 
-        <select id="operacion">
-            <option value="suma">➕ Suma</option>
-            <option value="resta">➖ Resta</option>
-            <option value="multiplica">✖ Multiplicación</option>
-            <option value="divide">➗ División</option>
-        </select>
+    <input type="number" id="num1" class="input-box" placeholder="Primer número">
+    <input type="number" id="num2" class="input-box" placeholder="Segundo número">
 
-        <button class="btn" onclick="calcular()">💥 Calcular</button>
+    <select id="operacion" class="select-box">
+      <option value="suma">SUMA</option>
+      <option value="resta">RESTA</option>
+      <option value="multiplica">MULTIPLICACIÓN</option>
+      <option value="divide">DIVISIÓN</option>
+    </select>
 
-        <div id="resultado"></div>
+    <button class="btn" onclick="calcular()">CALCULAR</button>
 
-        <div class="info-box">
-            <strong>📘 Guía del Jugador:</strong>
-            <p>➕ Suma dos números para obtener más puntos.</p>
-            <p>➖ Resta para esquivar obstáculos.</p>
-            <p>✖ Multiplica para aumentar poder.</p>
-            <p>➗ Divide para repartir energía.</p>
-        </div>
+    <div id="resultado"></div>
 
-        <button class="btn btn-problemas" onclick="location.href='leccion.html'">
-            📚 Ir a Problemas del Juego
-        </button>
+    <button class="btn" style="background:#2962ff; box-shadow:0 10px 0 #0036a3; margin-top:40px;"
+      onclick="location.href='leccion.html'">
+      IR A LECCIÓN
+    </button>   
 
-    </div>
+  </div>
 
-    <script>
-        function calcular() {
-            const n1 = parseFloat(document.getElementById("num1").value);
-            const n2 = parseFloat(document.getElementById("num2").value);
-            const oper = document.getElementById("operacion").value;
+  <script>
+    function calcular() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      const oper = document.getElementById("operacion").value;
 
-            let res = "";
+      let res = "";
 
-            if (isNaN(n1) || isNaN(n2)) {
-                res = "⚠️ Ingresa dos números válidos.";
-            } else {
-                switch (oper) {
-                    case "suma": res = n1 + n2; break;
-                    case "resta": res = n1 - n2; break;
-                    case "multiplica": res = n1 * n2; break;
-                    case "divide":
-                        res = n2 !== 0 ? (n1 / n2).toFixed(2) : "❌ División por 0 no permitida";
-                        break;
-                }
-            }
-
-            document.getElementById("resultado").innerHTML = "Resultado: <strong>" + res + "</strong>";
+      if (isNaN(n1) || isNaN(n2)) {
+        res = "Debes ingresar dos números válidos.";
+      } else {
+        switch (oper) {
+          case "suma": res = n1 + n2; break;
+          case "resta": res = n1 - n2; break;
+          case "multiplica": res = n1 * n2; break;
+          case "divide":
+            res = n2 !== 0 ? (n1 / n2).toFixed(2) : "No se puede dividir entre 0.";
+            break;
         }
-    </script>
+      }
+
+      document.getElementById("resultado").textContent = "Resultado: " + res;
+    }
+  </script>
 
 </body>
 </html>
