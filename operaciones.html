@@ -3,104 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprende Operaciones Básicas</title>
+    <title>Operaciones Matemáticas - Juego</title>
 
     <style>
         body {
-            font-family: "Comic Sans MS", Arial, sans-serif;
-            background: linear-gradient(#a5d6a7, #e8f5e9);
-            padding: 20px;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: url('https://i.imgur.com/4N6bQGx.png');
+            background-size: cover;
             text-align: center;
+            color: white;
+            padding: 20px;
         }
 
         h1 {
-            color: #1b5e20;
-            font-size: 40px;
+            font-size: 42px;
+            text-shadow: 3px 3px 0px #000;
+            margin-bottom: 10px;
         }
 
-        .contenedor {
-            background: white;
-            padding: 25px;
+        .game-panel {
+            background: rgba(0, 0, 0, 0.75);
+            border: 4px solid #00e676;
             border-radius: 20px;
             width: 95%;
-            max-width: 500px;
+            max-width: 480px;
             margin: auto;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            animation: aparecer 0.8s ease;
+            padding: 20px;
+            box-shadow: 0 0 20px #00ff8a;
+            animation: aparecer 0.6s ease-out;
         }
 
         @keyframes aparecer {
-            from {transform: scale(0.9); opacity: 0;}
-            to   {transform: scale(1); opacity: 1;}
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
 
-        input, select, button {
-            margin-top: 12px;
+        .text-box {
             padding: 12px;
-            font-size: 18px;
             width: 90%;
             border-radius: 10px;
-            border: 2px solid #81c784;
+            font-size: 20px;
+            border: 3px solid #00e676;
+            background: #1b1b1b;
+            color: #00e676;
+            font-weight: bold;
         }
 
         select {
-            background: #c8e6c9;
+            padding: 12px;
+            width: 95%;
+            border-radius: 10px;
+            font-size: 18px;
+            border: 3px solid #00e676;
+            background: #263238;
+            color: #00e676;
         }
 
-        button {
-            background: #2e7d32;
-            color: white;
+        .btn {
+            margin-top: 15px;
+            padding: 12px;
+            width: 90%;
+            background: #00e676;
+            color: #000;
+            border-radius: 10px;
+            font-size: 20px;
             font-weight: bold;
             cursor: pointer;
+            border: none;
+            box-shadow: 0px 0px 10px #00ff9d;
+            transition: 0.15s ease-in-out;
         }
 
-        button:hover {
-            background: #1b5e20;
+        .btn:hover {
+            background: #00b248;
+            box-shadow: 0px 0px 20px #00ff9d;
         }
 
         #resultado {
-            margin-top: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #1b5e20;
+            font-size: 30px;
+            margin-top: 15px;
+            color: #00e676;
+            text-shadow: 2px 2px 0px #000;
         }
 
-        .info {
-            text-align: left;
-            padding: 10px;
+        .info-box {
             margin-top: 20px;
-            background: #f1f8e9;
-            border-left: 6px solid #66bb6a;
+            padding: 15px;
+            background: #1b1b1b;
+            border-left: 6px solid #00e676;
             border-radius: 10px;
-        }
-
-        .info h3 {
-            margin: 5px 0;
-            color: #2e7d32;
+            text-align: left;
+            font-size: 16px;
         }
 
         .btn-problemas {
-            margin-top: 20px;
-            background: #ff7043;
+            background: #ffea00;
+            color: #000;
+            box-shadow: 0px 0px 10px #fff176;
         }
 
         .btn-problemas:hover {
-            background: #e64a19;
+            background: #fdd835;
+            box-shadow: 0px 0px 20px #fff176;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>🧠 Operaciones Matemáticas 🧮</h1>
+    <h1>🎮 Modo Arcade Matemático</h1>
+    <p style="text-shadow: 2px 2px 0px #000;">¡Introduce los números y elige la operación para jugar!</p>
 
-    <div class="contenedor">
+    <div class="game-panel">
 
-        <p><strong>Aprende y practica</strong> las operaciones básicas.  
-        Ingresa dos números, elige la operación y obtén el resultado.</p>
+        <input type="number" id="num1" class="text-box" placeholder="Primer número">
+        <br><br>
 
-        <input type="number" id="num1" placeholder="Escribe el primer número">
-        <input type="number" id="num2" placeholder="Escribe el segundo número">
+        <input type="number" id="num2" class="text-box" placeholder="Segundo número">
+        <br><br>
 
         <select id="operacion">
             <option value="suma">➕ Suma</option>
@@ -109,20 +129,20 @@
             <option value="divide">➗ División</option>
         </select>
 
-        <button onclick="calcular()">Calcular Resultado</button>
+        <button class="btn" onclick="calcular()">💥 Calcular</button>
 
         <div id="resultado"></div>
 
-        <div class="info">
-            <h3>📘 ¿Cómo funcionan las operaciones?</h3>
-            <p><strong>➕ Suma:</strong> Une cantidades. Ejemplo: 3 + 2 = 5</p>
-            <p><strong>➖ Resta:</strong> Quita una parte. Ejemplo: 5 - 2 = 3</p>
-            <p><strong>✖ Multiplicación:</strong> Sumar varias veces lo mismo. Ejemplo: 3 × 4 = 12</p>
-            <p><strong>➗ División:</strong> Reparte en partes iguales. Ejemplo: 12 ÷ 3 = 4</p>
+        <div class="info-box">
+            <strong>📘 Guía del Jugador:</strong>
+            <p>➕ Suma dos números para obtener más puntos.</p>
+            <p>➖ Resta para esquivar obstáculos.</p>
+            <p>✖ Multiplica para aumentar poder.</p>
+            <p>➗ Divide para repartir energía.</p>
         </div>
 
-        <button class="btn-problemas" onclick="location.href='leccion.html'">
-            📚 Ir a Problemas de Práctica
+        <button class="btn btn-problemas" onclick="location.href='leccion.html'">
+            📚 Ir a Problemas del Juego
         </button>
 
     </div>
@@ -136,20 +156,14 @@
             let res = "";
 
             if (isNaN(n1) || isNaN(n2)) {
-                res = "⚠️ Ingresa los dos números";
+                res = "⚠️ Ingresa dos números válidos.";
             } else {
                 switch (oper) {
-                    case "suma":
-                        res = n1 + n2;
-                        break;
-                    case "resta":
-                        res = n1 - n2;
-                        break;
-                    case "multiplica":
-                        res = n1 * n2;
-                        break;
+                    case "suma": res = n1 + n2; break;
+                    case "resta": res = n1 - n2; break;
+                    case "multiplica": res = n1 * n2; break;
                     case "divide":
-                        res = n2 !== 0 ? (n1 / n2).toFixed(2) : "❌ No se puede dividir entre 0";
+                        res = n2 !== 0 ? (n1 / n2).toFixed(2) : "❌ División por 0 no permitida";
                         break;
                 }
             }
