@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Operaciones Básicas</title>
+
+    <style>
+        body {
+            font-family: "Comic Sans MS", Arial, sans-serif;
+            background: linear-gradient(#a5d6a7, #e8f5e9);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1b5e20;
+            font-size: 40px;
+        }
+
+        .contenedor {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            width: 95%;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            animation: aparecer 0.8s ease;
+        }
+
+        @keyframes aparecer {
+            from {transform: scale(0.9); opacity: 0;}
+            to   {transform: scale(1); opacity: 1;}
+        }
+
+        input, select, button {
+            margin-top: 12px;
+            padding: 12px;
+            font-size: 18px;
+            width: 90%;
+            border-radius: 10px;
+            border: 2px solid #81c784;
+        }
+
+        select {
+            background: #c8e6c9;
+        }
+
+        button {
+            background: #2e7d32;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1b5e20;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #1b5e20;
+        }
+
+        .info {
+            text-align: left;
+            padding: 10px;
+            margin-top: 20px;
+            background: #f1f8e9;
+            border-left: 6px solid #66bb6a;
+            border-radius: 10px;
+        }
+
+        .info h3 {
+            margin: 5px 0;
+            color: #2e7d32;
+        }
+
+        .btn-problemas {
+            margin-top: 20px;
+            background: #ff7043;
+        }
+
+        .btn-problemas:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧠 Operaciones Matemáticas 🧮</h1>
+
+    <div class="contenedor">
+
+        <p><strong>Aprende y practica</strong> las operaciones básicas.  
+        Ingresa dos números, elige la operación y obtén el resultado.</p>
+
+        <input type="number" id="num1" placeholder="Escribe el primer número">
+        <input type="number" id="num2" placeholder="Escribe el segundo número">
+
+        <select id="operacion">
+            <option value="suma">➕ Suma</option>
+            <option value="resta">➖ Resta</option>
+            <option value="multiplica">✖ Multiplicación</option>
+            <option value="divide">➗ División</option>
+        </select>
+
+        <button onclick="calcular()">Calcular Resultado</button>
+
+        <div id="resultado"></div>
+
+        <div class="info">
+            <h3>📘 ¿Cómo funcionan las operaciones?</h3>
+            <p><strong>➕ Suma:</strong> Une cantidades. Ejemplo: 3 + 2 = 5</p>
+            <p><strong>➖ Resta:</strong> Quita una parte. Ejemplo: 5 - 2 = 3</p>
+            <p><strong>✖ Multiplicación:</strong> Sumar varias veces lo mismo. Ejemplo: 3 × 4 = 12</p>
+            <p><strong>➗ División:</strong> Reparte en partes iguales. Ejemplo: 12 ÷ 3 = 4</p>
+        </div>
+
+        <button class="btn-problemas" onclick="location.href='problemas.html'">
+            📚 Ir a Problemas de Práctica
+        </button>
+
+    </div>
+
+    <script>
+        function calcular() {
+            const n1 = parseFloat(document.getElementById("num1").value);
+            const n2 = parseFloat(document.getElementById("num2").value);
+            const oper = document.getElementById("operacion").value;
+
+            let res = "";
+
+            if (isNaN(n1) || isNaN(n2)) {
+                res = "⚠️ Ingresa los dos números";
+            } else {
+                switch (oper) {
+                    case "suma":
+                        res = n1 + n2;
+                        break;
+                    case "resta":
+                        res = n1 - n2;
+                        break;
+                    case "multiplica":
+                        res = n1 * n2;
+                        break;
+                    case "divide":
+                        res = n2 !== 0 ? (n1 / n2).toFixed(2) : "❌ No se puede dividir entre 0";
+                        break;
+                }
+            }
+
+            document.getElementById("resultado").innerHTML = "Resultado: <strong>" + res + "</strong>";
+        }
+    </script>
+
+</body>
+</html>
