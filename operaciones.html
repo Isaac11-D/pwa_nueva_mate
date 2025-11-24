@@ -65,7 +65,7 @@
       margin-bottom:25px;
     }
 
-    p, li {
+    p {
       font-size:1.25rem;
       margin-bottom:20px;
       line-height:2.1;
@@ -123,6 +123,14 @@
       text-align:center;
     }
 
+    #explicacion {
+      margin-top:20px;
+      background:#000;
+      padding:20px;
+      border-left:8px solid #00ff41;
+      font-size:1.2rem;
+      line-height:2;
+    }
   </style>
 </head>
 
@@ -137,7 +145,7 @@
 
     <h2>Calculadora de Operaciones</h2>
 
-    <p>Introduce dos números y selecciona la operación que deseas realizar. Esta herramienta te ayudará a practicar y comprender cómo funcionan las operaciones básicas.</p>
+    <p>Introduce dos números, elige una operación y descubre cómo funciona cada una. Esta herramienta está diseñada para que los niños aprendan de forma clara y divertida.</p>
 
     <input type="number" id="num1" class="input-box" placeholder="Primer número">
     <input type="number" id="num2" class="input-box" placeholder="Segundo número">
@@ -152,11 +160,12 @@
     <button class="btn" onclick="calcular()">CALCULAR</button>
 
     <div id="resultado"></div>
+    <div id="explicacion"></div>
 
     <button class="btn" style="background:#2962ff; box-shadow:0 10px 0 #0036a3; margin-top:40px;"
-      onclick="location.href='leccion.html'">
-      IR A LECCIÓN
-    </button>   
+      onclick="location.href='problemas.html'">
+      IR A PROBLEMAS
+    </button>
 
   </div>
 
@@ -167,21 +176,43 @@
       const oper = document.getElementById("operacion").value;
 
       let res = "";
+      let exp = "";
 
       if (isNaN(n1) || isNaN(n2)) {
-        res = "Debes ingresar dos números válidos.";
-      } else {
-        switch (oper) {
-          case "suma": res = n1 + n2; break;
-          case "resta": res = n1 - n2; break;
-          case "multiplica": res = n1 * n2; break;
-          case "divide":
-            res = n2 !== 0 ? (n1 / n2).toFixed(2) : "No se puede dividir entre 0.";
-            break;
-        }
+        document.getElementById("resultado").textContent = "Debes ingresar dos números válidos.";
+        document.getElementById("explicacion").textContent = "";
+        return;
+      }
+
+      switch (oper) {
+        case "suma":
+          res = n1 + n2;
+          exp = "La suma consiste en juntar cantidades. Aquí estás uniendo " + n1 + " y " + n2 + " para obtener el total.";
+          break;
+
+        case "resta":
+          res = n1 - n2;
+          exp = "La resta sirve para saber cuánto queda al quitar una cantidad. Aquí estás tomando " + n2 + " de " + n1 + ".";
+          break;
+
+        case "multiplica":
+          res = n1 * n2;
+          exp = "La multiplicación es sumar un número varias veces. Es como sumar " + n1 + " repetido " + n2 + " veces.";
+          break;
+
+        case "divide":
+          if (n2 === 0) {
+            res = "No se puede dividir entre 0.";
+            exp = "";
+          } else {
+            res = (n1 / n2).toFixed(2);
+            exp = "La división reparte una cantidad en partes iguales. Estás repartiendo " + n1 + " en " + n2 + " partes.";
+          }
+          break;
       }
 
       document.getElementById("resultado").textContent = "Resultado: " + res;
+      document.getElementById("explicacion").textContent = exp;
     }
   </script>
 
