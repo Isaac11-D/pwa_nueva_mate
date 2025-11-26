@@ -1,12 +1,20 @@
 {
   "name": "Problemas de Operaciones - Isaac",
   "short_name": "Matemáticas Isaac",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#2e7d32",
-  "theme_color": "#2e7d32",
+  "background_color": "#0a2a0a",
+  "theme_color": "#00ff41",
   "icons": [
-    {"src": "assets/logo2.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "assets/logo1.png", "sizes": "512x512", "type": "image/png"}
+    {
+      "src": "./assets/logo2.png",
+      "sizes": "192x192", 
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/logo1.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }

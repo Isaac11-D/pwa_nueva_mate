@@ -77,20 +77,26 @@
     </a>
   </div>
 
-  <script>
-    function actualizar(){
-      document.getElementById('status').textContent = navigator.onLine ? "Conectado" : "¡Offline y todo funciona!";
-    }
-    window.addEventListener('online',actualizar);
-    window.addEventListener('offline',actualizar);
-    actualizar();
-    if('serviceWorker' in navigator) navigator.serviceWorker.register('/pwa_nueva_mate/sw.js')
-            .then(registration => {
-          console.log('SW registrado correctamente:', registration.scope);
-        })
-        .catch(error => {
-          console.log('Error registrando SW:', error);
-        });
-  </script>
+<script>
+  function actualizar(){
+    document.getElementById('status').textContent = navigator.onLine ? 
+      "Conectado ✅" : "¡Offline y todo funciona! 🌐";
+  }
+  
+  window.addEventListener('online', actualizar);
+  window.addEventListener('offline', actualizar);
+  actualizar();
+
+  // CORREGIR ESTA LÍNEA - usar ruta relativa
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+      .then(registration => {
+        console.log('✅ SW registrado correctamente:', registration.scope);
+      })
+      .catch(error => {
+        console.log('❌ Error registrando SW:', error);
+      });
+  }
+</script>
 </body>
 </html>
